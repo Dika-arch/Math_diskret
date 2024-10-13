@@ -30,8 +30,11 @@ Contoh:
 A = {2, 4, 6, 8}
 
 2 adalah anggota A, ditulis 2  $\in$  A
+
 4 adalah anggota A, ditulis 4  $\in$  A
+
 5 bukan anggota A, ditulis 5  $\notin$  A
+
 
 
 ---
