@@ -5,7 +5,7 @@ title: Himpunan
 
 # Himpunan
 Himpunan adalah kumpulan objek atau benda yang didefinisikan dengan jelas, sehingga dapat dibedakan antara yang termasuk dan yang tidak termasuk dalam himpunan tersebut.
-Dalam himpunan, setiap objek disebut sebagai anggota atau elemen. Anggota himpunan ditandai dengan "$\in$" , sementara yang bukan anggota ditandai dengan 
+Dalam himpunan, setiap objek disebut sebagai anggota atau elemen. Anggota himpunan ditandai dengan " $\in$ " , sementara yang bukan anggota ditandai dengan 
 " $\notin$ "
 
 **Contoh:** 
