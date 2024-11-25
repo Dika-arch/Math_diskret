@@ -1,0 +1,1020 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Deretan Dan Rekursi &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'deretan dan rekursi';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Centrality Graph" href="Centrality%20Graph.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Math Diskret
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Himpunan.html">Himpunan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Logika%20Matematika.html">Logika Matematika</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="Algoritma.html">Algoritma</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Aljabar%20Boolean%20%26%20Gerbang%20Logika.html">Aljabar Boolean &amp; Gerbang Logika</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Centrality%20Graph.html">Centrality Graph</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Deretan Dan Rekursi</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fderetan dan rekursi.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/deretan dan rekursi.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Deretan Dan Rekursi</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deretan-sequence">Deretan (sequence)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">Penjumlahan deretan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumasi-ganda">Sumasi ganda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rekursi">Rekursi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-rekursif">Fungsi Rekursif</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struktur-rekursif">Struktur Rekursif</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-rumus-rumus-summasi">Pembuktian Rumus-Rumus Summasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-deret-geometri">1. Rumus Deret Geometri</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-penjumlahan-bilangan-bulat">2. Rumus Penjumlahan Bilangan Bulat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-penjumlahan-kuadrat-bilangan-bulat">3. Rumus Penjumlahan Kuadrat Bilangan Bulat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan">Latihan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tentukan-nilai">1. Tentukan nilai:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2. Tentukan nilai:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3. Tentukan nilai:</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="deretan-dan-rekursi">
+<h1>Deretan Dan Rekursi<a class="headerlink" href="#deretan-dan-rekursi" title="Link to this heading">#</a></h1>
+<section id="deretan-sequence">
+<h2>Deretan (sequence)<a class="headerlink" href="#deretan-sequence" title="Link to this heading">#</a></h2>
+<ul>
+<li><p>Deretan adalah suatu urutan atau susunan elemen atau objek yang disusun secara teratur berdasarkan suatu aturan tertentu. Elemen dalam deretan biasanya berupa angka, huruf, simbol, atau objek lainnya, dan urutannya dapat didasarkan pada pola, nilai, atau hubungan tertentu</p></li>
+<li><p>Definisi: Sebuah deretan adalah fungsi dari subset suatu himpunan bilangan bulat (biasanya N atau P) ke sebuah himpunan S.</p>
+<p><strong>N</strong> = {1, 2, 3, 4, … }
+S misalnya {2, 4, 6, 8, …},   {1/3, 1/5, 1/7, …},  dsb</p>
+</li>
+<li><div class="math notranslate nohighlight">
+\[Notasi.deretan: \{a_n\}\]</div>
+</li>
+<li><p>Deretan umumnya dinyatakan dalam suatu formula, misalnya:
+$<span class="math notranslate nohighlight">\(a_n = 2n\)</span><span class="math notranslate nohighlight">\(
+  \)</span><span class="math notranslate nohighlight">\(a_n = 1/n\)</span><span class="math notranslate nohighlight">\(
+  \)</span><span class="math notranslate nohighlight">\(a_n = 7 – 3n\)</span>$</p></li>
+</ul>
+<p>Dalam konteks matematika, deretan sering merujuk pada barisan bilangan, yaitu kumpulan bilangan yang disusun dalam suatu pola tertentu.
+Misalnya:</p>
+<ol class="arabic simple">
+<li><p>Deretan bilangan ganjil: 1,3,5,7,…</p></li>
+<li><p>Deretan bilangan genap: 2,4,6,8,…</p></li>
+<li><p>Deretan bilangan yang membentuk deret aritmetika: 3,6,9,12….</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Contoh-contoh deretan dan formulanya:</strong></p></li>
+<li><p><strong>Deret Aritmetika</strong>
+Deret dengan pola kenaikan atau penurunan tetap.
+. <strong>Contoh</strong>: 2,5,8,11,14,…
+. <strong>Rumus suku ke-n</strong>: $<span class="math notranslate nohighlight">\(𝑈_𝑛=𝑎+(𝑛−1)⋅𝑏\)</span>$</p></li>
+</ul>
+<p>Di mana:
+. 𝑎 : suku pertama
+. 𝑏 : b eda (selisih antar suku
+. 𝑛 : nomor suku yang dicari</p>
+<ul class="simple">
+<li><p><strong>Deret Geometri</strong>
+Deret dengan pola kelipatan tetap.
+. <strong>Contoh</strong>: 3,6,12,24,48,…
+. <strong>Rumus suku ke-n</strong>:$<span class="math notranslate nohighlight">\(𝑈_𝑛=𝑎⋅𝑟 ^{(𝑛-1)}\)</span>$</p></li>
+</ul>
+<p>Di mana:
+. 𝑎 : suku pertama
+. 𝑟 : rasio (perbandingan antar suku),
+. 𝑛 : nomor suku yang dicari</p>
+<ul class="simple">
+<li><p><strong>Deret Bilangan Kuadrat</strong>
+Deret dengan pola nilai berupa kuadrat bilangan bulat.
+. <strong>Contoh</strong> : 1,4,9,16,25,…
+. <strong>Rumus suku ke-n</strong>: $<span class="math notranslate nohighlight">\( 𝑈_𝑛=𝑛^2 \)</span>$</p></li>
+<li><p><strong>Deret Bilangan Kubik</strong>
+Deret dengan pola nilai berupa kubik bilangan bulat
+. <strong>Contoh</strong>: 1,8,27,64,125,…
+. <strong>Rumus suku ke-n</strong>: $<span class="math notranslate nohighlight">\(𝑈_𝑛=𝑛^3\)</span>$</p></li>
+<li><p><strong>Deret Fibonacci</strong>
+Deret dengan pola di mana setiap suku merupakan jumlah dua suku sebelumnya.
+. <strong>Contoh</strong>: 0,1,1,2,3,5,8,…
+. <strong>Rumus suku ke-n</strong> (rekursif): $<span class="math notranslate nohighlight">\(𝐹_𝑛=𝐹_{𝑛−1}+𝐹_{𝑛−2},𝐹_0=0,𝐹_1=1\)</span>$</p></li>
+</ul>
+<p>String adalah deretan berhingga karakter berbentuk
+$<span class="math notranslate nohighlight">\( a_1a_2a_3a_4...a_n \)</span>$</p>
+<p>Panjang string S adalah jumlah karakter di dalam string tersebut.</p>
+<p>Contoh:  informatika adalah string dengan panjang 11 karakter
+10100101 adalah string biner dengan panjang 8 bit</p>
+<div class="math notranslate nohighlight">
+\[ String. kosong. dilambangkan. dengan. \lambda,panjangnya = 0 \]</div>
+</section>
+<section id="penjumlahan-deretan">
+<h2>Penjumlahan deretan<a class="headerlink" href="#penjumlahan-deretan" title="Link to this heading">#</a></h2>
+<p>Jumlah deretan<br />
+aₘ, aₘ₊₁, aₘ₊₂, …, aₙ</p>
+<p>adalah<br />
+aₘ + aₘ₊₁ + aₘ₊₂ + … + aₙ</p>
+<p>atau dalam notasi summasi:<br />
+Σₖ₌ₘ aₖ</p>
+<p>k adalah indeks summasi,<br />
+m adalah batas bawah indeks,<br />
+n adalah batas atas indeks</p>
+<p>Contoh 2:<br />
+Berapa nilai $<span class="math notranslate nohighlight">\(∑_{𝑘=1}^{5}𝑘^2\)</span>$</p>
+<p>Jawaban:<br />
+$<span class="math notranslate nohighlight">\(
+\Sigma_{k=1}^{5} k^2 = 1^2 + 2^2 + 3^2 + 4^2 + 5^2 = 1 + 4 + 9 + 16 + 25 = 55
+\)</span>$</p>
+<p>Contoh 3:<br />
+Batas bawah sumasi kadangkala perlu digeser agar dapat dijumlahkan dengan sumasi lain yang memiliki batas bawah berbeda. Pada contoh 2 di atas batas bawah digeser dari 1 menjadi 0, akibatnya:<br />
+$<span class="math notranslate nohighlight">\(
+\Sigma_{k=1}^{5} k^2 = \Sigma_{k=0}^{4} (k + 1)^2
+\)</span>$</p>
+<p>Contoh 4:<br />
+Sumasi dapat dipecah dengan membagi dua indeksnya, misalnya:<br />
+$<span class="math notranslate nohighlight">\(
+\Sigma_{k=1}^{100} k^2 = \Sigma_{k=1}^{49} k^2 + \Sigma_{k=50}^{100} k^2
+\)</span>$</p>
+<ul class="simple">
+<li><p>Beberapa sumasi sudah ditemukan rumus penjumlahannya sebagai berikut:</p></li>
+</ul>
+<p>………</p>
+<p>Contoh 5: Hitung Nilai $<span class="math notranslate nohighlight">\(∑_{(k=50)}^{100} k²\)</span>$</p>
+<p><em>Jawaban</em>:</p>
+<div class="math notranslate nohighlight">
+\[
+\Sigma_{k=50}^{100} k^2 = \Sigma_{k=1}^{49} k^2 + \Sigma_{k=1}^{100} k^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\Sigma_{k=50}^{100} k^2 = \Sigma_{k=1}^{100} k^2 - \Sigma_{k=1}^{49} k^2
+\]</div>
+<p>Gunakan rumus:</p>
+<div class="math notranslate nohighlight">
+\[
+\Sigma_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}
+\]</div>
+<p>Perhitungan:</p>
+<div class="math notranslate nohighlight">
+\[
+\Sigma_{k=50}^{100} k^2 = \frac{100(101)(201)}{6} - \frac{49(50)(99)}{6}
+= 338.350 - 40.425 = \mathbf{297.925}
+\]</div>
+</section>
+<section id="sumasi-ganda">
+<h2>Sumasi ganda<a class="headerlink" href="#sumasi-ganda" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Di dalam algoritma, kita perlu menghitung berapa kali suatu operasi tertentu dilakukan di dalam sebuah kalang bersarang (nested loop). Penjumlahan semua operasi di dalam kalang bersarang dinyatakan dalam bentuk sumasi ganda.</p></li>
+</ul>
+<p>Contoh: $<span class="math notranslate nohighlight">\(∑_{𝑖=1}^{4}∑_{𝑗=1}^{3}𝑖𝑗 \)</span>$</p>
+<p>Untuk menghitung sumasi ganda, mula-mula ekspansi sumasi terdalam, lalu  dilanjukan dengan sumasi terluar:
+$<span class="math notranslate nohighlight">\(∑_{(𝑖=1)}^{4}∑_{𝑗=1}^{3}𝑖𝑗 = ∑_{𝑖=1}^{4}(𝑖+2𝑖+3𝑖)= ∑_{𝑖=1}^4 6𝑖 = 6 + 12 + 18 + 24 = 60\)</span>$</p>
+<p>Contoh penggunaan: Berapa kali operasi + dilakukan di dalam algoritma di bawah ini?</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x = 0
+for j = 1 to 10 do  
+    for k = 1 to j do  
+        x = x + 2  
+    end for  
+end for
+</pre></div>
+</div>
+<p>Penyelesaian:
+Operasi + terdapat di dalam pernyataan x = x + 2
+Operasi ini dilakukan satu kali pada setiap pengulangan
+Jumlah seluruh operasi + adalah:</p>
+<div class="math notranslate nohighlight">
+\[t = ∑_{(𝑗=1)}^{10}∑_{(𝑘=1)}^{𝑗}1 \]</div>
+<div class="math notranslate nohighlight">
+\[  = ∑_{(𝑗=1)}^{10}(1+1+ …+1 .𝑠𝑒𝑏𝑎𝑛𝑦𝑎𝑘. 𝑗 .𝑘𝑎𝑙𝑖)〗\]</div>
+<div class="math notranslate nohighlight">
+\[  = ∑_{(𝑗=1)}^{10}𝑗 \]</div>
+<div class="math notranslate nohighlight">
+\[  = \frac{10(10+1)}{2}  = 55\]</div>
+</section>
+<section id="rekursi">
+<h2>Rekursi<a class="headerlink" href="#rekursi" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Sebuah objek dikatakan rekursif  (recursive) jika ia didefinisikan dalam terminologi dirinya sendiri.</p></li>
+<li><p>Proses mendefinisikan objek dalam terminologi dirinya sendiri disebut rekursi (recursion).</p></li>
+<li><p>Objek fraktal  adalah contoh bentuk rekursif.</p></li>
+</ul>
+<section id="fungsi-rekursif">
+<h3>Fungsi Rekursif<a class="headerlink" href="#fungsi-rekursif" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Fungsi rekursif didefinisikan oleh dua bagian:
+ (i)  Basis</p></li>
+<li><p>Bagian yang berisi nilai fungsi yang terdefinisi secara eksplisit.</p></li>
+<li><p>Bagian ini juga sekaligus menghentikan rekursif (dan memberikan sebuah nilai yang terdefinisi pada fungsi rekursif).
+ 
+(ii)  Rekurens</p></li>
+<li><p>Bagian ini mendefinisikan fungsi dalam terminologi dirinya sendiri.</p></li>
+<li><p>Berisi kaidah untuk menemukan nilai fungsi pada suatu input dari nilai-nilai lainnya pada input yang lebih kecil.</p></li>
+</ul>
+<p>Contoh 6
+Misalkan <span class="math notranslate nohighlight">\(f\)</span> didefinisikan secara rekursif sebagai:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(n) = \begin{cases}
+3, &amp; \text{, } n = 0 \\ b
+2f(n-1) + 4, &amp; \text{, } n &gt; 0
+\end{cases}
+\end{split}\]</div>
+<p>Tentukan nilai <span class="math notranslate nohighlight">\(f(4)\)</span>!</p>
+<p>Solusi:      f(4) = 2f(3) + 4
+=  2(2f(2) + 4) + 4
+=  2(2(2f(1) + 4) + 4) + 4
+=  2(2(2(2f(0) + 4) + 4) + 4) + 4
+=  2(2(2(2.3 + 4) + 4) + 4) + 4	
+=  2(2(2(10) + 4) + 4) + 4
+=  2(2(24) + 4) + 4
+=  2(52) + 4
+=  108</p>
+<p>Cara lain menghitungnya:
+f(0) = 3
+f(1) = 2f(0) + 4 = 2 . 3 + 4 = 10
+f(2) = 2f(1) + 4 = 2 . 10 + 4 = 24
+f(3) = 2f(2) + 4 = 2 . 24 + 4 = 52
+f(4) = 2f(3) + 4 = 2 . 52 + 4 = 108</p>
+<p>Jadi, f(4) = 108.</p>
+<p>Contoh 7: Nyatakan n! dalam definisi rekursif</p>
+<p>Solusi:</p>
+<div class="math notranslate nohighlight">
+\[
+n! =  \underbrace{ 1 \times 2 \times 3 \times \dots \times (n-1)}_{(n-1)!} \times n 
+={(n-1)!} \times n
+\]</div>
+<p>Misalkan f(n) = n!, maka</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+n! = 
+\begin{cases} 
+1 &amp; \text{, } n = 0 \\
+n. (n-1)! &amp; \text{, } n &gt; 0
+\end{cases}
+\end{split}\]</div>
+<p>Menghitung 5! secara rekursif adalah:
+5! = 5 . 4! = 5 . 4 . 3! = 5 . 4 . 3 . 2!
+= 5 . 4 . 3 . 2 . 1! = 5 . 4 . 3 . 2 . 1 . 0!	=  5 . 4 . 3 . 2 . 1 . 1 = 120</p>
+<p>Algoritma menghitung faktorial:</p>
+<p>function Faktorial (input  n :integer) <strong>integer</strong>
+{ mengembalikan nilai n!;
+basis   : jika n = 0, maka 0! = 1
+rekurens: jika n &gt; 0, maka n! = n x (n-1)!
+}
+DEKLARASI ALGORITMA:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>if n = 0 then
+   return 1		              { basis }
+else
+   return  n * Faktorial(n – 1)	{ rekurens }
+end
+</pre></div>
+</div>
+<p>Contoh 8: Barisan Fibonacci  0, 1, 1, 2, 3, 5, 8, 11, 19, …. Dapat dinyatakan secara rekursif sebagai berikut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f_n = 
+\begin{cases} 
+0, &amp; \text{ } n = 0 \\
+1, &amp; \text{ } n = 1 \\
+f_{n-1} + f_{n-2}, &amp; \text{ } n &gt; 1
+\end{cases}
+\end{split}\]</div>
+<p>Contoh 9: Fungsi (polinom) Chebyshev dinyatakan sebagai</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+T(n, x) = 
+\begin{cases} 
+1, &amp; \text{ } n = 0 \\
+x, &amp; \text{ } n = 1 \\
+2x \cdot T(n-1, x) - T(n-2, x), &amp; \text{ } n &gt; 1
+\end{cases}
+\end{split}\]</div>
+<p>Contoh 10: Sumasi    $<span class="math notranslate nohighlight">\(∑_{(𝑘=0)}^{𝑛}𝑎_𝑘 \)</span>$             didefinisikan secara rekursif sebagai  berikut:</p>
+<div class="math notranslate nohighlight">
+\[∑_{𝑘=0}^𝑛 𝑎_𝑘 =𝑎_0+𝑎_1+𝑎_2+...+𝑎_{𝑛−1}+𝑎_𝑛 \]</div>
+<div class="math notranslate nohighlight">
+\[= (𝑎_0+𝑎_1+𝑎_2+...+𝑎_(𝑛−1))+𝑎_𝑛 \]</div>
+<div class="math notranslate nohighlight">
+\[= (∑_{𝑘=0}^{𝑛−1}𝑎_𝑘 )+𝑎_𝑛 \]</div>
+<p>sehingga
+$<span class="math notranslate nohighlight">\(
+\sum_{k=0}^{n} a_k = 
+\begin{cases}
+a_0   &amp; \text{, } n = 0 \\
+\left( \sum_{k=0}^{n-1} a_k \right) + a_n &amp; \text{, } n &gt; 0
+\end{cases}
+\)</span>$</p>
+</section>
+</section>
+<section id="struktur-rekursif">
+<h2>Struktur Rekursif<a class="headerlink" href="#struktur-rekursif" title="Link to this heading">#</a></h2>
+<p>Struktur data yang penting dalam komputer adalah pohon biner (binary tree).</p>
+<p>…….</p>
+<ul class="simple">
+<li><p>Simpul (node) pada pohon biner mempunyai paling banyak dua buah anak.</p></li>
+<li><p>Jumlah anak pada setiap simpul bisa 1, 2, atau 0.</p></li>
+<li><p>Simpul yang mempunyai anak disebut simpul cabang (branch node) atau simpul dalam (internal node)</p></li>
+<li><p>Simpul yang tidak mempunyai anak disebut simpul daun (leave).</p></li>
+<li><p>Pohon biner adalah struktur yang rekursif, sebab setiap simpul mempunyai cabang yang juga berupa pohon. Setiap cabang disebut  upapohon (subtree).</p></li>
+</ul>
+<p>…..</p>
+<p>Oleh karena itu, pohon dapat didefinisikan secara rekursif sebagari berikut:</p>
+<p>(i) Basis: kosong adalah pohon biner
+(ii) Rekurens: Jika T1 dan T2 adalah pohon biner, maka</p>
+<p>….</p>
+<p>adalah pohon biner</p>
+<p>Proses pembentukan pohon biner secara rekursif:</p>
+<p>….</p>
+</section>
+<section id="pembuktian-rumus-rumus-summasi">
+<h2>Pembuktian Rumus-Rumus Summasi<a class="headerlink" href="#pembuktian-rumus-rumus-summasi" title="Link to this heading">#</a></h2>
+</section>
+<section id="rumus-deret-geometri">
+<h2>1. Rumus Deret Geometri<a class="headerlink" href="#rumus-deret-geometri" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+\sum_{k=0}^n ar^k \quad (r \neq 0) = \frac{ar^{n+1} - a}{r - 1}, \quad r \neq 1
+\]</div>
+<p><em>Bukti:</em></p>
+<ol class="arabic simple">
+<li><p>Mulai dari definisi deret geometri:
+$<span class="math notranslate nohighlight">\(
+S = a + ar + ar^2 + \dots + ar^n
+\)</span>$</p></li>
+<li><p>Kalikan kedua sisi dengan (r):
+$<span class="math notranslate nohighlight">\(
+rS = ar + ar^2 + \dots + ar^{n+1}
+\)</span>$</p></li>
+<li><p>Kurangkan (S - rS):
+$<span class="math notranslate nohighlight">\(
+S - rS = a - ar^{n+1}
+\)</span>$</p></li>
+<li><p>Faktorkan (S(1 - r)):
+$<span class="math notranslate nohighlight">\(
+S(1 - r) = a(1 - r^{n+1})
+\)</span>$</p></li>
+<li><p>Bagi dengan (1 - r) (dengan syarat (r \neq 1)):
+$<span class="math notranslate nohighlight">\(
+S = \frac{a(r^{n+1} - 1)}{r - 1} = \frac{ar^{n+1} - a}{r - 1}
+\)</span>$</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="rumus-penjumlahan-bilangan-bulat">
+<h2>2. Rumus Penjumlahan Bilangan Bulat<a class="headerlink" href="#rumus-penjumlahan-bilangan-bulat" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+\sum_{k=1}^n k = \frac{n(n+1)}{2}
+\]</div>
+<p><em>Bukti dengan Induksi Matematika:</em></p>
+<ol class="arabic simple">
+<li><p><em>Basis:</em> Untuk (n = 1):
+$<span class="math notranslate nohighlight">\(
+\sum_{k=1}^1 k = 1 = \frac{1(1+1)}{2}
+\)</span>$
+Benar.</p></li>
+<li><p><em>Hipotesis Induksi:</em> Misalkan benar untuk (n = m):
+$<span class="math notranslate nohighlight">\(
+\sum_{k=1}^m k = \frac{m(m+1)}{2}
+\)</span>$</p></li>
+<li><p><em>Langkah Induksi:</em> Tunjukkan benar untuk (n = m+1):
+$<span class="math notranslate nohighlight">\(
+\sum_{k=1}^{m+1} k = \sum_{k=1}^m k + (m+1)
+\)</span><span class="math notranslate nohighlight">\(
+Substitusi hipotesis induksi:
+\)</span><span class="math notranslate nohighlight">\(
+\sum_{k=1}^{m+1} k = \frac{m(m+1)}{2} + (m+1)
+\)</span><span class="math notranslate nohighlight">\(
+Faktorkan \(m+1\):
+\)</span><span class="math notranslate nohighlight">\(
+\sum_{k=1}^{m+1} k = \frac{m(m+1) + 2(m+1)}{2} = \frac{(m+1)(m+2)}{2}
+\)</span>$</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="rumus-penjumlahan-kuadrat-bilangan-bulat">
+<h2>3. Rumus Penjumlahan Kuadrat Bilangan Bulat<a class="headerlink" href="#rumus-penjumlahan-kuadrat-bilangan-bulat" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}
+\]</div>
+<p><em>Bukti dengan Induksi Matematika:</em></p>
+<ol class="arabic simple">
+<li><p><em>Basis:</em> Untuk (n = 1):
+$<span class="math notranslate nohighlight">\(
+\sum_{k=1}^1 k^2 = 1^2 = 1 = \frac{1(1+1)(2\cdot1+1)}{6}
+\)</span>$
+Benar.</p></li>
+<li><p><em>Hipotesis Induksi:</em> Misalkan benar untuk (n = m):
+$<span class="math notranslate nohighlight">\(
+\sum_{k=1}^m k^2 = \frac{m(m+1)(2m+1)}{6}
+\)</span>$</p></li>
+<li><p><em>Langkah Induksi:</em> Tunjukkan benar untuk (n = m+1):
+$<span class="math notranslate nohighlight">\(
+\sum_{k=1}^{m+1} k^2 = \sum_{k=1}^m k^2 + (m+1)^2
+\)</span><span class="math notranslate nohighlight">\(
+Substitusi hipotesis induksi:
+\)</span><span class="math notranslate nohighlight">\(
+\sum_{k=1}^{m+1} k^2 = \frac{m(m+1)(2m+1)}{6} + (m+1)^2
+\)</span><span class="math notranslate nohighlight">\(
+Faktorkan \((m+1)\):
+\)</span><span class="math notranslate nohighlight">\(
+\sum_{k=1}^{m+1} k^2 = \frac{m(m+1)(2m+1) + 6(m+1)^2}{6}
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+= \frac{(m+1)m(2m+1) + 6(m+1)]}{6}
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+= \frac{(m+1)(2m^2 + 7m + 6)}{6}
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+Faktorkan (2m^2 + 7m + 6):
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+= \frac{(m+1)(m+2)(2m+1)}{6}
+\)</span>$</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="latihan">
+<h2>Latihan<a class="headerlink" href="#latihan" title="Link to this heading">#</a></h2>
+</section>
+<hr class="docutils" />
+<section id="tentukan-nilai">
+<h2>1. Tentukan nilai:<a class="headerlink" href="#tentukan-nilai" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+\sum_{k=1}^8 2^k + \sum_{k=2}^8 (-3)^k
+\]</div>
+<p><em>Penyelesaian:</em></p>
+<ul class="simple">
+<li><p>Untuk $<span class="math notranslate nohighlight">\(\sum_{k=1}^8 2^k\)</span><span class="math notranslate nohighlight">\(, gunakan rumus deret geometri:
+\)</span><span class="math notranslate nohighlight">\(
+S = \sum_{k=1}^8 2^k = \frac{2(2^8 - 1)}{2 - 1} = 2^9 - 2 = 512 - 2 = 510
+\)</span>$</p></li>
+<li><p>Untuk $<span class="math notranslate nohighlight">\(\sum_{k=2}^8 (-3)^k \)</span><span class="math notranslate nohighlight">\(, gunakan rumus deret geometri (dengan suku pertama \)</span><span class="math notranslate nohighlight">\((-3)^2 = 9)\)</span><span class="math notranslate nohighlight">\(:
+\)</span><span class="math notranslate nohighlight">\(
+S = \sum_{k=2}^8 (-3)^k = \frac{9((-3)^7 - 1)}{-3 - 1} = \frac{9(-2187 - 1)}{-4} = \frac{9(-2188)}{-4} = 4923
+\)</span>$</p></li>
+<li><p>Jadi, total:
+$<span class="math notranslate nohighlight">\(
+\sum_{k=1}^8 2^k + \sum_{k=2}^8 (-3)^k = 510 + 4923 = 5433
+\)</span>$</p></li>
+</ul>
+<p><em>Jawaban: 5433</em></p>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h2>2. Tentukan nilai:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+\sum_{i=0}^2 \sum_{j=0}^3 (2i + 3j)
+\]</div>
+<p><em>Penyelesaian:</em></p>
+<ol class="arabic">
+<li><p>Pisahkan penjumlahan:
+$<span class="math notranslate nohighlight">\(
+S = \sum_{i=0}^2 \sum_{j=0}^3 (2i + 3j)
+= \sum_{i=0}^2 \left( \sum_{j=0}^3 2i + \sum_{j=0}^3 3j \right)
+\)</span>$</p></li>
+<li><p>Untuk $<span class="math notranslate nohighlight">\(\sum_{j=0}^3 2i:\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\sum_{j=0}^3 2i = 4i \quad \text{(karena ada 4 suku, semua dengan nilai \(2i\))}
+\)</span>$</p></li>
+<li><p>Untuk $<span class="math notranslate nohighlight">\(\sum_{j=0}^3 3j\)</span><span class="math notranslate nohighlight">\(:
+\)</span><span class="math notranslate nohighlight">\(
+\sum_{j=0}^3 3j = 3(0 + 1 + 2 + 3) = 3 \cdot 6 = 18
+\)</span>$</p></li>
+<li><p>Gabungkan:
+$<span class="math notranslate nohighlight">\(
+S = \sum_{i=0}^2 (4i + 18) = \sum_{i=0}^2 4i + \sum_{i=0}^2 18
+\)</span>$</p></li>
+<li><p>Hitung:</p>
+<ul>
+<li><div class="math notranslate nohighlight">
+\[\sum_{i=0}^2 4i = 4(0 + 1 + 2) = 4 \cdot 3 = 12\]</div>
+</li>
+<li><div class="math notranslate nohighlight">
+\[\sum_{i=0}^2 18 = 18 \cdot 3 = 54\]</div>
+</li>
+</ul>
+</li>
+<li><p>Total:
+$<span class="math notranslate nohighlight">\(
+S = 12 + 54 = 66
+\)</span>$</p></li>
+</ol>
+<p><em>Jawaban: 66</em></p>
+</section>
+<hr class="docutils" />
+<section id="id2">
+<h2>3. Tentukan nilai:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
+\sum_{i=0}^3 \sum_{j=0}^2 i
+\]</div>
+<p><em>Penyelesaian:</em></p>
+<ol class="arabic simple">
+<li><p>Pisahkan penjumlahan:
+$<span class="math notranslate nohighlight">\(
+S = \sum_{i=0}^3 \sum_{j=0}^2 i
+\)</span>$</p></li>
+<li><p>Karena (i) adalah konstanta untuk setiap (j), maka:
+$<span class="math notranslate nohighlight">\(
+\sum_{j=0}^2 i = 3i \quad \text{(ada 3 suku, semua bernilai \(i\))}.
+\)</span>$</p></li>
+<li><p>Maka:
+$<span class="math notranslate nohighlight">\(
+S = \sum_{i=0}^3 3i = 3 \sum_{i=0}^3 i
+\)</span>$</p></li>
+<li><p>Hitung $<span class="math notranslate nohighlight">\((\sum_{i=0}^3 i:\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\sum_{i=0}^3 i = 0 + 1 + 2 + 3 = 6
+\)</span>$</p></li>
+<li><p>Total:
+$<span class="math notranslate nohighlight">\(
+S = 3 \cdot 6 = 18
+\)</span>$</p></li>
+</ol>
+<p><em>Jawaban: 18</em></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Centrality%20Graph.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Centrality Graph</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deretan-sequence">Deretan (sequence)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">Penjumlahan deretan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumasi-ganda">Sumasi ganda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rekursi">Rekursi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-rekursif">Fungsi Rekursif</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#struktur-rekursif">Struktur Rekursif</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-rumus-rumus-summasi">Pembuktian Rumus-Rumus Summasi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-deret-geometri">1. Rumus Deret Geometri</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-penjumlahan-bilangan-bulat">2. Rumus Penjumlahan Bilangan Bulat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-penjumlahan-kuadrat-bilangan-bulat">3. Rumus Penjumlahan Kuadrat Bilangan Bulat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan">Latihan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tentukan-nilai">1. Tentukan nilai:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2. Tentukan nilai:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3. Tentukan nilai:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
