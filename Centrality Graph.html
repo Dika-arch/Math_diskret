@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Math Diskret &#8212; My sample book</title>
+    <title>Centrality Graph &#8212; My sample book</title>
   
   
   
@@ -62,10 +62,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Centrality Graph';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Himpunan" href="Himpunan.html" />
+    <link rel="next" title="" href="Deret%20dan%20rekursi.html" />
+    <link rel="prev" title="Aljabar Boolean &amp; Gerbang Logika" href="Aljabar%20Boolean%20%26%20Gerbang%20Logika.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -117,8 +118,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -138,7 +137,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -165,19 +164,19 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Math Diskret
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Himpunan.html">Himpunan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Logika%20Matematika.html">Logika Matematika</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Algoritma.html">Algoritma</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Aljabar%20Boolean%20%26%20Gerbang%20Logika.html">Aljabar Boolean &amp; Gerbang Logika</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Centrality%20Graph.html">Centrality Graph</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Centrality Graph</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Deret%20dan%20rekursi.html"></a></li>
 
 
@@ -261,7 +260,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FCentrality Graph.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +290,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/Centrality Graph.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -354,7 +353,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -365,11 +366,21 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Math Diskret</h1>
+    <h1>Centrality Graph</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degree-centrality">Degree centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closenes-centrality">Closenes centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betweeness-centrality">Betweeness Centrality</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -379,35 +390,58 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="math-diskret">
-<h1>Math Diskret<a class="headerlink" href="#math-diskret" title="Link to this heading">#</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Himpunan.html">Himpunan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Logika%20Matematika.html">Logika Matematika</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Logika%20Matematika.html#latihan-soal">Latihan soal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Algoritma.html">Algoritma</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Aljabar%20Boolean%20%26%20Gerbang%20Logika.html">Aljabar Boolean &amp; Gerbang Logika</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Centrality%20Graph.html">Centrality Graph</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Deret%20dan%20rekursi.html"></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Deret%20dan%20rekursi.html#contoh-deretan-aritmetika">CONTOH DERETAN ARITMETIKA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Deret%20dan%20rekursi.html#deret-aritmetika">DERET ARITMETIKA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Deret%20dan%20rekursi.html#deret-geometri">DERET GEOMETRI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Deret%20dan%20rekursi.html#deret-bilangan-kuadrat">DERET BILANGAN KUADRAT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Deret%20dan%20rekursi.html#deret-bilangan-kubik">Deret Bilangan Kubik</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Deret%20dan%20rekursi.html#deret-fibonacci">DERET FIBONACCI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Deret%20dan%20rekursi.html#penjumlahan-deretan">PENJUMLAHAN DERETAN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Deret%20dan%20rekursi.html#sumasi-ganda">SUMASI GANDA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Deret%20dan%20rekursi.html#fungsi-rekursif">FUNGSI REKURSIF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Deret%20dan%20rekursi.html#id10"></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Deret%20dan%20rekursi.html#struktur-rekursif">STRUKTUR REKURSIF</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="centrality-graph">
+<h1>Centrality Graph<a class="headerlink" href="#centrality-graph" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<p>Dengan menggunakan teori graf. Implementasi Social Network Analysis dapat menjelaskan relasi atau hubungan antar aktor melalui visualisasi berbentuk graf</p>
+<p><img alt="image" src="https://hackmd.io/_uploads/rJGXBWdM1x.png" /></p>
+<p>terdapat node yang mewakili orang atau individu atau aktor. Relasi antar objek dapat dinyatakan dengan link, Social network terdiri dari banyak aktor yang mempunyai relasisatu sama lain hingga membentuk peta jaringan sosial yang dinyatakan dengan graph</p>
+<p><img alt="image" src="https://hackmd.io/_uploads/rJ7z8-dfye.png" /></p>
+<p>Tidak semua node dalam jaringan adalah penting  (aktor)
+Mencari node yang paling penting dalam suatu jaringan
+Centrality adalah penentuan aktor menggunakan ukuran pada Social Network</p>
+<p>Centrality dalam teori graf dan social network. Dibagi menjadi empat jenis,</p>
+<ul class="simple">
+<li><p>degree centrality,</p></li>
+<li><p>betweeness centrality,</p></li>
+<li><p>closeness centrality</p></li>
+<li><p>eigenvector centrality</p></li>
 </ul>
-</div>
+<hr class="docutils" />
+<section id="degree-centrality">
+<h2>Degree centrality<a class="headerlink" href="#degree-centrality" title="Link to this heading">#</a></h2>
+<p>Degree centrality adalah jumlah link yang terkoneksi pada suatu node yang mewakili interaksi.
+Pentingnya node ditentukan oleh jumlah node yang berdekatan dengan node tersebut
+Lebih besar derajatnya (degree), maka lebih penting node itu dalam suatu jaringan
+Hanya sebagian kecil node yang memiliki derajat tinggi dalam jaringan</p>
+<div class="math notranslate nohighlight">
+\[
+C_D(v) = \frac{\text{deg}(v)}{n - 1}
+\]</div>
+<p>Di mana:</p>
+<p>deg(v) : jumlah koneksi langsung dari node v
+n : total jumlah node dalam jaringan.</p>
+<p><img alt="image" src="https://hackmd.io/_uploads/HkwqDWdfyg.png" /></p>
+<p>Untuk  node 1, degree centrality adalah 3</p>
+</section>
+<hr class="docutils" />
+<section id="closenes-centrality">
+<h2>Closenes centrality<a class="headerlink" href="#closenes-centrality" title="Link to this heading">#</a></h2>
+<p>Closenes centrality adalah nilai kedekatan antara satu node dengan node lain dalam jaringan dengan menghitung rata-rata dari jarak relasi node-node tersebut. Skor closeness centrality mewakili kecepatan dalam penyebaran informasi.</p>
+<p><img alt="image" src="https://hackmd.io/_uploads/B11oFbuzkl.png" /></p>
+<p><img alt="image" src="https://hackmd.io/_uploads/BJYntbdzJg.png" /></p>
+<p>node 1 ke node 1 jaraknya 0, node 1 ke node 2,3,4 jaraknya 1, node 1 ke 5,6 jaraknya 2 node, node 1 ke node 7,8 jaraknya 3 node, node 1 ke node 9 jaraknya 4 node</p>
+<p><img alt="image" src="https://hackmd.io/_uploads/H1nTnW_GJl.png" /></p>
+</section>
+<hr class="docutils" />
+<section id="betweeness-centrality">
+<h2>Betweeness Centrality<a class="headerlink" href="#betweeness-centrality" title="Link to this heading">#</a></h2>
+<p>Skor betweeness Centrality mewakili seberapa besar informasi yang tersebar dari suatu aktor. Semakin besar skor, artinya aktor tersebut semakin berperan dalam penyebaran informasi</p>
+<p>Semakin banyak lintasan yang harus melewati persimpangan itu (misal tidak ada jalan alternatif), maka semakin penting arti persimpangan tersebut. Hal ini menandakan seberapa besar suatu node diperlukan sebagai penghubung dalam penyebaran informasi di dalam jaringan</p>
+<p>Ukuran ini juga dapat digunakan untuk mengidentifikasi orang atau node yang berperan sebagai penghubung (jembatan) antara dua komunitas</p>
+<p><img alt="image" src="https://hackmd.io/_uploads/SypS3b_zye.png" /></p>
+<p><img alt="image" src="https://hackmd.io/_uploads/SkAqhZ_Mke.png" /></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -440,12 +474,21 @@ It does not go in-depth into any particular topic - check out <a class="referenc
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="Aljabar%20Boolean%20%26%20Gerbang%20Logika.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Aljabar Boolean &amp; Gerbang Logika</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="Himpunan.html"
+       href="Deret%20dan%20rekursi.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Himpunan</p>
+        <p class="prev-next-title"></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -455,6 +498,24 @@ It does not go in-depth into any particular topic - check out <a class="referenc
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#degree-centrality">Degree centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closenes-centrality">Closenes centrality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#betweeness-centrality">Betweeness Centrality</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
