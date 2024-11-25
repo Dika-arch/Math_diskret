@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>CONTOH DERETAN ARITMETIKA &#8212; My sample book</title>
+    <title>Deret dan rekursi &#8212; My sample book</title>
   
   
   
@@ -63,7 +63,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'deretdanrekursi';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Centrality Graph" href="Centrality%20Graph.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -114,6 +113,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
@@ -167,23 +168,14 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Himpunan.html">Himpunan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Logika%20Matematika.html">Logika Matematika</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="Algoritma.html">Algoritma</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Aljabar%20Boolean%20%26%20Gerbang%20Logika.html">Aljabar Boolean &amp; Gerbang Logika</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Centrality%20Graph.html">Centrality Graph</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">CONTOH DERETAN ARITMETIKA</a></li>
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="deretandanrekursi.html">DERETAN DAN REKURSI</a></li>
 
 
 
@@ -366,7 +358,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>CONTOH DERETAN ARITMETIKA</h1>
+    <h1>Deret dan rekursi</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -376,17 +368,20 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">CONTOH DERETAN ARITMETIKA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Deret dan rekursi</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-deretan-aritmetika">CONTOH DERETAN ARITMETIKA</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-aritmetika">DERET ARITMETIKA</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-geometri">DERET GEOMETRI</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-bilangan-kuadrat">DERET BILANGAN KUADRAT</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-bilangan-kubik">Deret Bilangan Kubik</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-fibonacci">DERET FIBONACCI</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-suku-ke-n-rekursif">- Rumus suku ke-n (rekursif):</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#panjang-string-s-adalah-jumlah-karakter-di-dalam-string-tersebut">Panjang string S adalah jumlah karakter di dalam string tersebut</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">PENJUMLAHAN DERETAN</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban">Jawaban:</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-fibonacci">DERET FIBONACCI</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-suku-ke-n-rekursif">- Rumus suku ke-n (rekursif):</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panjang-string-s-adalah-jumlah-karakter-di-dalam-string-tersebut">Panjang string S adalah jumlah karakter di dalam string tersebut</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">PENJUMLAHAN DERETAN</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban">Jawaban:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-1-100k-2-k-1-49k-2-k-50-100k-2">∑_(𝑘=1)^100▒𝑘^2 =  ∑_(𝑘=1)^49▒𝑘^2  +  ∑_(𝑘=50)^100▒𝑘^2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-50-100k-2-k-1-100k-2-k-1-49k-2">∑_(𝑘=50)^100▒𝑘^2  = ∑_(𝑘=1)^100▒𝑘^2 −  ∑_(𝑘=1)^49▒𝑘^2</a></li>
@@ -402,42 +397,38 @@
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-rekursif">FUNGSI REKURSIF</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-rekursif-didefinisikan-oleh-dua-bagian">Fungsi rekursif didefinisikan oleh dua bagian:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-menghitung-faktorial">Algoritma menghitung faktorial:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-faktorial-input-n-integer-integer">function Faktorial (input  n :integer)integer</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengembalikan-nilai-n">{ mengembalikan nilai n!;</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-jika-n-0-maka-0-1">basis   : jika n = 0, maka 0! = 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rekurens-jika-n-0-maka-n-n-n-1">rekurens: jika n &gt; 0, maka n! = n  (n-1)!</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">}</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deklarasi">DEKLARASI</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">-</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma">ALGORITMA:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-n-0-then">if n = 0 then</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#return-1-basis">return 1		              { basis }</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#else">else</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#return-n-faktorial-n-1-rekurens">return  n * Faktorial(n – 1)	{ rekurens }</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#end">end</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan">Latihan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definisikan-an-secara-rekursif-yang-dalam-hal-ini-a-adalah-bilangan-riil-tidak-nol-dan-n-adalah-bilangan-bulat-tidak-negatif">1. Definisikan an secara rekursif , yang dalam hal ini a adalah bilangan riil tidak-nol dan n adalah bilangan bulat tidak-negatif.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nyatakan-a-b-secara-rekursif-yang-dalam-hal-ini-a-dan-b-adalah-bilangan-bulat-positif">2. Nyatakan a  b secara rekursif, yang dalam hal ini a dan b adalah bilangan bulat positif.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusinya-ada-setelah-slide-berikut">(Solusinya ada setelah slide berikut!)</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-rekursif-didefinisikan-oleh-dua-bagian">Fungsi rekursif didefinisikan oleh dua bagian:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-menghitung-faktorial">Algoritma menghitung faktorial:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-faktorial-input-n-integer-integer">function Faktorial (input  n :integer)integer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengembalikan-nilai-n">{ mengembalikan nilai n!;</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-jika-n-0-maka-0-1">basis   : jika n = 0, maka 0! = 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rekurens-jika-n-0-maka-n-n-n-1">rekurens: jika n &gt; 0, maka n! = n  (n-1)!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deklarasi">DEKLARASI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">-</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma">ALGORITMA:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-n-0-then">if n = 0 then</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#return-1-basis">return 1		              { basis }</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else">else</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#return-n-faktorial-n-1-rekurens">return  n * Faktorial(n – 1)	{ rekurens }</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#end">end</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan">Latihan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisikan-an-secara-rekursif-yang-dalam-hal-ini-a-adalah-bilangan-riil-tidak-nol-dan-n-adalah-bilangan-bulat-tidak-negatif">1. Definisikan an secara rekursif , yang dalam hal ini a adalah bilangan riil tidak-nol dan n adalah bilangan bulat tidak-negatif.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nyatakan-a-b-secara-rekursif-yang-dalam-hal-ini-a-dan-b-adalah-bilangan-bulat-positif">2. Nyatakan a  b secara rekursif, yang dalam hal ini a dan b adalah bilangan bulat positif.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusinya-ada-setelah-slide-berikut">(Solusinya ada setelah slide berikut!)</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id9"></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#struktur-rekursif">STRUKTUR REKURSIF</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohon-biner-adalah-struktur-yang-rekursif-sebab-setiap-simpul-mempunyai-cabang-yang-juga-berupa-pohon-setiap-cabang-disebut-upapohon-subtree">Pohon biner adalah struktur yang rekursif, sebab setiap simpul mempunyai cabang yang juga berupa pohon. Setiap cabang disebut  upapohon (subtree).</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-basis-kosong-adalah-pohon-biner">(i) Basis: kosong adalah pohon biner</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-rekurens-jika-t1-dan-t2-adalah-pohon-biner-maka">(ii) Rekurens: Jika T1 dan T2 adalah pohon biner, maka   </a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adalah-pohon-biner">adalah pohon biner</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t1-t2">T1       T2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohon-biner-adalah-struktur-yang-rekursif-sebab-setiap-simpul-mempunyai-cabang-yang-juga-berupa-pohon-setiap-cabang-disebut-upapohon-subtree">Pohon biner adalah struktur yang rekursif, sebab setiap simpul mempunyai cabang yang juga berupa pohon. Setiap cabang disebut  upapohon (subtree).</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-basis-kosong-adalah-pohon-biner">(i) Basis: kosong adalah pohon biner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-rekurens-jika-t1-dan-t2-adalah-pohon-biner-maka">(ii) Rekurens: Jika T1 dan T2 adalah pohon biner, maka   </a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adalah-pohon-biner">adalah pohon biner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t1-t2">T1       T2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"></a></li>
 </ul>
 </li>
 </ul>
@@ -452,7 +443,8 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>Deret dan rekursi</p>
+  <section id="deret-dan-rekursi">
+<h1>Deret dan rekursi<a class="headerlink" href="#deret-dan-rekursi" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <p>Deretan adalah suatu urutan atau susunan elemen atau objek yang disusun secara teratur berdasarkan suatu aturan tertentu. Elemen dalam deretan biasanya berupa angka, huruf, simbol, atau objek lainnya, dan urutannya dapat didasarkan pada pola, nilai, atau hubungan tertentu
 Definisi: Sebuah deretan adalah fungsi dari subset suatu himpunan bilangan bulat (biasanya N atau P) ke sebuah himpunan S.</p>
@@ -470,7 +462,8 @@ Misalnya:
 Deretan bilangan ganjil: 1,3,5,7,…
 Deretan bilangan genap: 2,4,6,8,…
 Deretan bilangan yang membentuk deret aritmetika: 3,6,9,12….</p>
-<section class="tex2jax_ignore mathjax_ignore" id="contoh-deretan-aritmetika">
+</section>
+<section id="contoh-deretan-aritmetika">
 <h1>CONTOH DERETAN ARITMETIKA<a class="headerlink" href="#contoh-deretan-aritmetika" title="Link to this heading">#</a></h1>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="deret-aritmetika">
@@ -513,21 +506,21 @@ Rumus suku ke-n:
 <h1>DERET FIBONACCI<a class="headerlink" href="#deret-fibonacci" title="Link to this heading">#</a></h1>
 <p>Deret dengan pola di mana setiap suku merupakan jumlah dua suku sebelumnya.
 Contoh: 0,1,1,2,3,5,8,…</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="rumus-suku-ke-n-rekursif">
-<h1>- Rumus suku ke-n (rekursif):<a class="headerlink" href="#rumus-suku-ke-n-rekursif" title="Link to this heading">#</a></h1>
+<section id="rumus-suku-ke-n-rekursif">
+<h2>- Rumus suku ke-n (rekursif):<a class="headerlink" href="#rumus-suku-ke-n-rekursif" title="Link to this heading">#</a></h2>
 <p>𝐹_𝑛=𝐹_(𝑛−1)+𝐹_(𝑛−2),𝐹_0=0,𝐹_1=1
 String adalah deretan berhingga karakter berbentuk
 a1a2a3a4…an</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="panjang-string-s-adalah-jumlah-karakter-di-dalam-string-tersebut">
-<h1>Panjang string S adalah jumlah karakter di dalam string tersebut<a class="headerlink" href="#panjang-string-s-adalah-jumlah-karakter-di-dalam-string-tersebut" title="Link to this heading">#</a></h1>
+<section id="panjang-string-s-adalah-jumlah-karakter-di-dalam-string-tersebut">
+<h2>Panjang string S adalah jumlah karakter di dalam string tersebut<a class="headerlink" href="#panjang-string-s-adalah-jumlah-karakter-di-dalam-string-tersebut" title="Link to this heading">#</a></h2>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1><a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>Contoh:  informatika adalah string dengan panjang 11 karakter
 10100101 adalah string biner dengan panjang 8 bit</p>
 <p>String kosong dilambangkan dengan , panjangnya = 0</p>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="penjumlahan-deretan">
 <h1>PENJUMLAHAN DERETAN<a class="headerlink" href="#penjumlahan-deretan" title="Link to this heading">#</a></h1>
@@ -549,9 +542,9 @@ Jawaban:
 <p>Contoh 4: Sumasi dapat dipecah dengan membagi dua indeksnya, misalnya
 ∑_(𝑘=1)^100▒𝑘^2 =  ∑_(𝑘=1)^49▒𝑘^2  +  ∑_(𝑘=50)^100▒𝑘^2
 Contoh 5: Hitung nilai    ∑_(𝑘=50)^100▒𝑘^2</p>
+<section id="jawaban">
+<h2>Jawaban:<a class="headerlink" href="#jawaban" title="Link to this heading">#</a></h2>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="jawaban">
-<h1>Jawaban:<a class="headerlink" href="#jawaban" title="Link to this heading">#</a></h1>
 <section id="k-1-100k-2-k-1-49k-2-k-50-100k-2">
 <h2>∑_(𝑘=1)^100▒𝑘^2 =  ∑_(𝑘=1)^49▒𝑘^2  +  ∑_(𝑘=50)^100▒𝑘^2<a class="headerlink" href="#k-1-100k-2-k-1-49k-2-k-50-100k-2" title="Link to this heading">#</a></h2>
 </section>
@@ -600,71 +593,71 @@ Berisi kaidah untuk menemukan nilai fungsi pada suatu input dari nilai-nilai lai
 <img alt="image" src="https://hackmd.io/_uploads/HyGErTl7Jx.png" />
 <img alt="image" src="https://hackmd.io/_uploads/SyaNHagmJg.png" /></p>
 <p><img alt="image" src="https://hackmd.io/_uploads/rk7jH6xmkx.png" /></p>
+</section>
 <section id="algoritma-menghitung-faktorial">
-<h3>Algoritma menghitung faktorial:<a class="headerlink" href="#algoritma-menghitung-faktorial" title="Link to this heading">#</a></h3>
+<h2>Algoritma menghitung faktorial:<a class="headerlink" href="#algoritma-menghitung-faktorial" title="Link to this heading">#</a></h2>
 </section>
 <section id="id4">
-<h3><a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h2><a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 </section>
 <section id="function-faktorial-input-n-integer-integer">
-<h3>function Faktorial (input  n :integer)integer<a class="headerlink" href="#function-faktorial-input-n-integer-integer" title="Link to this heading">#</a></h3>
+<h2>function Faktorial (input  n :integer)integer<a class="headerlink" href="#function-faktorial-input-n-integer-integer" title="Link to this heading">#</a></h2>
 </section>
 <section id="mengembalikan-nilai-n">
-<h3>{ mengembalikan nilai n!;<a class="headerlink" href="#mengembalikan-nilai-n" title="Link to this heading">#</a></h3>
+<h2>{ mengembalikan nilai n!;<a class="headerlink" href="#mengembalikan-nilai-n" title="Link to this heading">#</a></h2>
 </section>
 <section id="basis-jika-n-0-maka-0-1">
-<h3>basis   : jika n = 0, maka 0! = 1<a class="headerlink" href="#basis-jika-n-0-maka-0-1" title="Link to this heading">#</a></h3>
+<h2>basis   : jika n = 0, maka 0! = 1<a class="headerlink" href="#basis-jika-n-0-maka-0-1" title="Link to this heading">#</a></h2>
 </section>
 <section id="rekurens-jika-n-0-maka-n-n-n-1">
-<h3>rekurens: jika n &gt; 0, maka n! = n  (n-1)!<a class="headerlink" href="#rekurens-jika-n-0-maka-n-n-n-1" title="Link to this heading">#</a></h3>
+<h2>rekurens: jika n &gt; 0, maka n! = n  (n-1)!<a class="headerlink" href="#rekurens-jika-n-0-maka-n-n-n-1" title="Link to this heading">#</a></h2>
 </section>
 <section id="id5">
-<h3>}<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<h2>}<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 </section>
 <section id="deklarasi">
-<h3>DEKLARASI<a class="headerlink" href="#deklarasi" title="Link to this heading">#</a></h3>
+<h2>DEKLARASI<a class="headerlink" href="#deklarasi" title="Link to this heading">#</a></h2>
 </section>
 <section id="id6">
-<h3>-<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<h2>-<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 </section>
 <section id="algoritma">
-<h3>ALGORITMA:<a class="headerlink" href="#algoritma" title="Link to this heading">#</a></h3>
+<h2>ALGORITMA:<a class="headerlink" href="#algoritma" title="Link to this heading">#</a></h2>
 </section>
 <section id="if-n-0-then">
-<h3>if n = 0 then<a class="headerlink" href="#if-n-0-then" title="Link to this heading">#</a></h3>
+<h2>if n = 0 then<a class="headerlink" href="#if-n-0-then" title="Link to this heading">#</a></h2>
 </section>
 <section id="return-1-basis">
-<h3>return 1		              { basis }<a class="headerlink" href="#return-1-basis" title="Link to this heading">#</a></h3>
+<h2>return 1		              { basis }<a class="headerlink" href="#return-1-basis" title="Link to this heading">#</a></h2>
 </section>
 <section id="else">
-<h3>else<a class="headerlink" href="#else" title="Link to this heading">#</a></h3>
+<h2>else<a class="headerlink" href="#else" title="Link to this heading">#</a></h2>
 </section>
 <section id="return-n-faktorial-n-1-rekurens">
-<h3>return  n * Faktorial(n – 1)	{ rekurens }<a class="headerlink" href="#return-n-faktorial-n-1-rekurens" title="Link to this heading">#</a></h3>
+<h2>return  n * Faktorial(n – 1)	{ rekurens }<a class="headerlink" href="#return-n-faktorial-n-1-rekurens" title="Link to this heading">#</a></h2>
 </section>
 <section id="end">
-<h3>end<a class="headerlink" href="#end" title="Link to this heading">#</a></h3>
+<h2>end<a class="headerlink" href="#end" title="Link to this heading">#</a></h2>
 <p><img alt="image" src="https://hackmd.io/_uploads/ByDXL6xXkx.png" />
 <img alt="image" src="https://hackmd.io/_uploads/BJF4ITxXJg.png" /></p>
 </section>
 <section id="latihan">
-<h3>Latihan<a class="headerlink" href="#latihan" title="Link to this heading">#</a></h3>
+<h2>Latihan<a class="headerlink" href="#latihan" title="Link to this heading">#</a></h2>
 </section>
 <section id="definisikan-an-secara-rekursif-yang-dalam-hal-ini-a-adalah-bilangan-riil-tidak-nol-dan-n-adalah-bilangan-bulat-tidak-negatif">
-<h3>1. Definisikan an secara rekursif , yang dalam hal ini a adalah bilangan riil tidak-nol dan n adalah bilangan bulat tidak-negatif.<a class="headerlink" href="#definisikan-an-secara-rekursif-yang-dalam-hal-ini-a-adalah-bilangan-riil-tidak-nol-dan-n-adalah-bilangan-bulat-tidak-negatif" title="Link to this heading">#</a></h3>
+<h2>1. Definisikan an secara rekursif , yang dalam hal ini a adalah bilangan riil tidak-nol dan n adalah bilangan bulat tidak-negatif.<a class="headerlink" href="#definisikan-an-secara-rekursif-yang-dalam-hal-ini-a-adalah-bilangan-riil-tidak-nol-dan-n-adalah-bilangan-bulat-tidak-negatif" title="Link to this heading">#</a></h2>
 </section>
 <section id="id7">
-<h3><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<h2><a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 </section>
 <section id="nyatakan-a-b-secara-rekursif-yang-dalam-hal-ini-a-dan-b-adalah-bilangan-bulat-positif">
-<h3>2. Nyatakan a  b secara rekursif, yang dalam hal ini a dan b adalah bilangan bulat positif.<a class="headerlink" href="#nyatakan-a-b-secara-rekursif-yang-dalam-hal-ini-a-dan-b-adalah-bilangan-bulat-positif" title="Link to this heading">#</a></h3>
+<h2>2. Nyatakan a  b secara rekursif, yang dalam hal ini a dan b adalah bilangan bulat positif.<a class="headerlink" href="#nyatakan-a-b-secara-rekursif-yang-dalam-hal-ini-a-dan-b-adalah-bilangan-bulat-positif" title="Link to this heading">#</a></h2>
 </section>
 <section id="id8">
-<h3><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<h2><a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 </section>
 <section id="solusinya-ada-setelah-slide-berikut">
-<h3>(Solusinya ada setelah slide berikut!)<a class="headerlink" href="#solusinya-ada-setelah-slide-berikut" title="Link to this heading">#</a></h3>
-</section>
+<h2>(Solusinya ada setelah slide berikut!)<a class="headerlink" href="#solusinya-ada-setelah-slide-berikut" title="Link to this heading">#</a></h2>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id9">
@@ -682,22 +675,22 @@ Simpul (node) pada pohon biner mempunyai paling banyak dua buah anak.</p>
 <h2>Pohon biner adalah struktur yang rekursif, sebab setiap simpul mempunyai cabang yang juga berupa pohon. Setiap cabang disebut  upapohon (subtree).<a class="headerlink" href="#pohon-biner-adalah-struktur-yang-rekursif-sebab-setiap-simpul-mempunyai-cabang-yang-juga-berupa-pohon-setiap-cabang-disebut-upapohon-subtree" title="Link to this heading">#</a></h2>
 <p><img alt="image" src="https://hackmd.io/_uploads/HyZT9TeX1e.png" /></p>
 <p>Oleh karena itu, pohon dapat didefinisikan secara rekursif sebagari berikut:</p>
+</section>
 <section id="i-basis-kosong-adalah-pohon-biner">
-<h3>(i) Basis: kosong adalah pohon biner<a class="headerlink" href="#i-basis-kosong-adalah-pohon-biner" title="Link to this heading">#</a></h3>
+<h2>(i) Basis: kosong adalah pohon biner<a class="headerlink" href="#i-basis-kosong-adalah-pohon-biner" title="Link to this heading">#</a></h2>
 </section>
 <section id="ii-rekurens-jika-t1-dan-t2-adalah-pohon-biner-maka">
-<h3>(ii) Rekurens: Jika T1 dan T2 adalah pohon biner, maka   <a class="headerlink" href="#ii-rekurens-jika-t1-dan-t2-adalah-pohon-biner-maka" title="Link to this heading">#</a></h3>
+<h2>(ii) Rekurens: Jika T1 dan T2 adalah pohon biner, maka   <a class="headerlink" href="#ii-rekurens-jika-t1-dan-t2-adalah-pohon-biner-maka" title="Link to this heading">#</a></h2>
 </section>
 <section id="adalah-pohon-biner">
-<h3>adalah pohon biner<a class="headerlink" href="#adalah-pohon-biner" title="Link to this heading">#</a></h3>
+<h2>adalah pohon biner<a class="headerlink" href="#adalah-pohon-biner" title="Link to this heading">#</a></h2>
 </section>
 <section id="t1-t2">
-<h3>T1       T2<a class="headerlink" href="#t1-t2" title="Link to this heading">#</a></h3>
+<h2>T1       T2<a class="headerlink" href="#t1-t2" title="Link to this heading">#</a></h2>
 </section>
 <section id="id10">
-<h3><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<h2><a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <p><img alt="image" src="https://hackmd.io/_uploads/HJrGiTgmyl.png" /></p>
-</section>
 </section>
 </section>
 
@@ -731,15 +724,6 @@ Simpul (node) pada pohon biner mempunyai paling banyak dua buah anak.</p>
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="Centrality%20Graph.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Centrality Graph</p>
-      </div>
-    </a>
 </div>
                 </footer>
               
@@ -757,17 +741,20 @@ Simpul (node) pada pohon biner mempunyai paling banyak dua buah anak.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">CONTOH DERETAN ARITMETIKA</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Deret dan rekursi</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-deretan-aritmetika">CONTOH DERETAN ARITMETIKA</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-aritmetika">DERET ARITMETIKA</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-geometri">DERET GEOMETRI</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-bilangan-kuadrat">DERET BILANGAN KUADRAT</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-bilangan-kubik">Deret Bilangan Kubik</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-fibonacci">DERET FIBONACCI</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-suku-ke-n-rekursif">- Rumus suku ke-n (rekursif):</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#panjang-string-s-adalah-jumlah-karakter-di-dalam-string-tersebut">Panjang string S adalah jumlah karakter di dalam string tersebut</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">PENJUMLAHAN DERETAN</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban">Jawaban:</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#deret-fibonacci">DERET FIBONACCI</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rumus-suku-ke-n-rekursif">- Rumus suku ke-n (rekursif):</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#panjang-string-s-adalah-jumlah-karakter-di-dalam-string-tersebut">Panjang string S adalah jumlah karakter di dalam string tersebut</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"></a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">PENJUMLAHAN DERETAN</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban">Jawaban:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-1-100k-2-k-1-49k-2-k-50-100k-2">∑_(𝑘=1)^100▒𝑘^2 =  ∑_(𝑘=1)^49▒𝑘^2  +  ∑_(𝑘=50)^100▒𝑘^2</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#k-50-100k-2-k-1-100k-2-k-1-49k-2">∑_(𝑘=50)^100▒𝑘^2  = ∑_(𝑘=1)^100▒𝑘^2 −  ∑_(𝑘=1)^49▒𝑘^2</a></li>
@@ -783,42 +770,38 @@ Simpul (node) pada pohon biner mempunyai paling banyak dua buah anak.</p>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-rekursif">FUNGSI REKURSIF</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-rekursif-didefinisikan-oleh-dua-bagian">Fungsi rekursif didefinisikan oleh dua bagian:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-menghitung-faktorial">Algoritma menghitung faktorial:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#function-faktorial-input-n-integer-integer">function Faktorial (input  n :integer)integer</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengembalikan-nilai-n">{ mengembalikan nilai n!;</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-jika-n-0-maka-0-1">basis   : jika n = 0, maka 0! = 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rekurens-jika-n-0-maka-n-n-n-1">rekurens: jika n &gt; 0, maka n! = n  (n-1)!</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">}</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deklarasi">DEKLARASI</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">-</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma">ALGORITMA:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-n-0-then">if n = 0 then</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#return-1-basis">return 1		              { basis }</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#else">else</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#return-n-faktorial-n-1-rekurens">return  n * Faktorial(n – 1)	{ rekurens }</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#end">end</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan">Latihan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definisikan-an-secara-rekursif-yang-dalam-hal-ini-a-adalah-bilangan-riil-tidak-nol-dan-n-adalah-bilangan-bulat-tidak-negatif">1. Definisikan an secara rekursif , yang dalam hal ini a adalah bilangan riil tidak-nol dan n adalah bilangan bulat tidak-negatif.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nyatakan-a-b-secara-rekursif-yang-dalam-hal-ini-a-dan-b-adalah-bilangan-bulat-positif">2. Nyatakan a  b secara rekursif, yang dalam hal ini a dan b adalah bilangan bulat positif.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusinya-ada-setelah-slide-berikut">(Solusinya ada setelah slide berikut!)</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-rekursif-didefinisikan-oleh-dua-bagian">Fungsi rekursif didefinisikan oleh dua bagian:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-menghitung-faktorial">Algoritma menghitung faktorial:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-faktorial-input-n-integer-integer">function Faktorial (input  n :integer)integer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengembalikan-nilai-n">{ mengembalikan nilai n!;</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-jika-n-0-maka-0-1">basis   : jika n = 0, maka 0! = 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rekurens-jika-n-0-maka-n-n-n-1">rekurens: jika n &gt; 0, maka n! = n  (n-1)!</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">}</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deklarasi">DEKLARASI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">-</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma">ALGORITMA:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#if-n-0-then">if n = 0 then</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#return-1-basis">return 1		              { basis }</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#else">else</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#return-n-faktorial-n-1-rekurens">return  n * Faktorial(n – 1)	{ rekurens }</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#end">end</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan">Latihan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisikan-an-secara-rekursif-yang-dalam-hal-ini-a-adalah-bilangan-riil-tidak-nol-dan-n-adalah-bilangan-bulat-tidak-negatif">1. Definisikan an secara rekursif , yang dalam hal ini a adalah bilangan riil tidak-nol dan n adalah bilangan bulat tidak-negatif.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nyatakan-a-b-secara-rekursif-yang-dalam-hal-ini-a-dan-b-adalah-bilangan-bulat-positif">2. Nyatakan a  b secara rekursif, yang dalam hal ini a dan b adalah bilangan bulat positif.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusinya-ada-setelah-slide-berikut">(Solusinya ada setelah slide berikut!)</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id9"></a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#struktur-rekursif">STRUKTUR REKURSIF</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohon-biner-adalah-struktur-yang-rekursif-sebab-setiap-simpul-mempunyai-cabang-yang-juga-berupa-pohon-setiap-cabang-disebut-upapohon-subtree">Pohon biner adalah struktur yang rekursif, sebab setiap simpul mempunyai cabang yang juga berupa pohon. Setiap cabang disebut  upapohon (subtree).</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#i-basis-kosong-adalah-pohon-biner">(i) Basis: kosong adalah pohon biner</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-rekurens-jika-t1-dan-t2-adalah-pohon-biner-maka">(ii) Rekurens: Jika T1 dan T2 adalah pohon biner, maka   </a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adalah-pohon-biner">adalah pohon biner</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t1-t2">T1       T2</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pohon-biner-adalah-struktur-yang-rekursif-sebab-setiap-simpul-mempunyai-cabang-yang-juga-berupa-pohon-setiap-cabang-disebut-upapohon-subtree">Pohon biner adalah struktur yang rekursif, sebab setiap simpul mempunyai cabang yang juga berupa pohon. Setiap cabang disebut  upapohon (subtree).</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#i-basis-kosong-adalah-pohon-biner">(i) Basis: kosong adalah pohon biner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ii-rekurens-jika-t1-dan-t2-adalah-pohon-biner-maka">(ii) Rekurens: Jika T1 dan T2 adalah pohon biner, maka   </a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adalah-pohon-biner">adalah pohon biner</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t1-t2">T1       T2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"></a></li>
 </ul>
 </li>
 </ul>
