@@ -397,42 +397,46 @@ Merupakan distribusi probabilitas yang diperbarui setelah menggabungkan informas
 <section id="contoh-soal">
 <h2>Contoh soal<a class="headerlink" href="#contoh-soal" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
+<li><p>Diketahui:</p></li>
+</ol>
+<p>Dokter mengetahui bahwa meningitis menyebabkan stiff neck adalah 50% -&gt; P(S|M)</p>
+<p>Prior probability of any patient having meningitis is 1/50.000 -&gt; P(M)</p>
+<p>Prior probability of any patient having stiff neck is 1/20 -&gt; P(S)</p>
+<p>Ditanyakan:
+Apabila pasien menderita stiff neck, berapa probabilitas terkena meningitis? P(M|S)?</p>
+<p>Jawab:
+P(M|S) = P(S|M) P(M) : P(S)</p>
+<p>P(M|S) = 0,5 x 1/50.000 : 1/20</p>
+<p>P(M|S) = 0,0002</p>
+<ol class="arabic simple" start="2">
 <li><p>Diketahui:
-Dokter mengetahui bahwa meningitis menyebabkan stiff neck adalah 50% -&gt; P(S|M)
-Prior probability of any patient having meningitis is 1/50.000 -&gt; P(M)
-Prior probability of any patient having stiff neck is 1/20 -&gt; P(S)
-Ditanyakan:
-Apabila pasien menderita stiff neck, berapa probabilitas terkena meningitis? P(M|S)?
-Jawab:
-P(M|S) = P(S|M) P(M) : P(S)
-P(M|S) = 0,5 x 1/50.000 : 1/20
-P(M|S) = 0,0002</p></li>
-<li><p>Diketahui:
-Tiga anggota sebuah organisasi telah dicalonkan sebagai ketua. Peluang Ardy terpilih adalah 0,3; peluang Charles terpilih adalah 0,5; dan peluang Kinanti terpilih adalah 0,2. Seandainya Ardy terpilih, peluang terjadinya kenaikan iuran anggota adalah 0,8. Seandainya Charles dan Kinanti terpilih, peluang kenaikan iuran anggota masing-masing adalah 0,1 dan 0,4. Berapa peluang terjadi kenaikan iuran anggota?
-Jawaban:
+Tiga anggota sebuah organisasi telah dicalonkan sebagai ketua. Peluang Ardy terpilih adalah 0,3; peluang Charles terpilih adalah 0,5; dan peluang Kinanti terpilih adalah 0,2. Seandainya Ardy terpilih, peluang terjadinya kenaikan iuran anggota adalah 0,8. Seandainya Charles dan Kinanti terpilih, peluang kenaikan iuran anggota masing-masing adalah 0,1 dan 0,4. Berapa peluang terjadi kenaikan iuran anggota?</p></li>
+</ol>
+<p>Jawaban:
 A = Kenaikan iuran anggota
 B1 = Ardi yang terpilih
 B2 = Charles yang terpilih
 B3 = Kinanti yang terpilih
 Peluang Ardy terpilih P(B1).P(A|B1) = (0,3)(0,8) = 0,24
 Peluang Charles terpilih P(B2).P(A|B2) = (0,5)(0,1) = 0,05
-Peluang Kinanti terpilih P(B3).P(A|B3) = (0,2)(0,4) = 0,08</p></li>
+Peluang Kinanti terpilih P(B3).P(A|B3) = (0,2)(0,4) = 0,08</p>
+<ol class="arabic simple" start="3">
 <li><p>Contoh Kasus
-Misalkan, ada sebuah tes medis untuk mendeteksi penyakit tertentu. Probabilitas dasar adalah:
-P( P )=0.01: Probabilitas seseorang memiliki penyakit adalah 1%.
-P(T∣P)=0.9: Probabilitas tes memberikan hasil positif jika seseorang memiliki penyakit adalah 90%.
-P(T∣¬P)=0.05: Probabilitas tes memberikan hasil positif jika seseorang tidak memiliki penyakit adalah 5%.
-Pertanyaan: Jika seseorang mendapat hasil tes positif, berapa probabilitas orang tersebut benar-benar memiliki penyakit P(P∣T)?
-Penyelesaian
-Gunakan Teorema Bayes:
-𝑃(𝑃∣𝑇)=𝑃(𝑇∣𝑃)⋅𝑃( 𝑃 ) / 𝑃(𝑇)
-Langkah1: Cari 𝑃(𝑇)
-𝑃(𝑇)=𝑃(𝑇∣𝑃)⋅𝑃( 𝑃 )+𝑃(𝑇∣¬𝑃)⋅𝑃(¬𝑃)
-P(T)=(0.9⋅0.01)+(0.05⋅0.99)=0.009+0.0495=0.0585
-Langkah 2: Hitung 𝑃(𝑃∣𝑇)
-𝑃(𝑃∣𝑇)=0.9⋅0.01 / 0.0585=0.154
-Jadi, probabilitas seseorang benar-benar memiliki penyakit jika hasil tes positif adalah 15.4%.</p></li>
+Misalkan, ada sebuah tes medis untuk mendeteksi penyakit tertentu. Probabilitas dasar adalah:</p></li>
 </ol>
+<p>P( P )=0.01: Probabilitas seseorang memiliki penyakit adalah 1%.</p>
+<p>P(T∣P)=0.9: Probabilitas tes memberikan hasil positif jika seseorang memiliki penyakit adalah 90%.</p>
+<p>P(T∣¬P)=0.05: Probabilitas tes memberikan hasil positif jika seseorang tidak memiliki penyakit adalah 5%.</p>
+<p>Pertanyaan: Jika seseorang mendapat hasil tes positif, berapa probabilitas orang tersebut benar-benar memiliki penyakit P(P∣T)?</p>
+<p>Penyelesaian
+Gunakan Teorema Bayes:</p>
+<p>𝑃(𝑃∣𝑇)=𝑃(𝑇∣𝑃)⋅𝑃( 𝑃 ) / 𝑃(𝑇)</p>
+<p>Langkah1: Cari 𝑃(𝑇)</p>
+<p>𝑃(𝑇)=𝑃(𝑇∣𝑃)⋅𝑃( 𝑃 )+𝑃(𝑇∣¬𝑃)⋅𝑃(¬𝑃)</p>
+<p>P(T)=(0.9⋅0.01)+(0.05⋅0.99)=0.009+0.0495=0.0585</p>
+<p>Langkah 2: Hitung 𝑃(𝑃∣𝑇)</p>
+<p>𝑃(𝑃∣𝑇)=0.9⋅0.01 / 0.0585=0.154</p>
+<p>Jadi, probabilitas seseorang benar-benar memiliki penyakit jika hasil tes positif adalah 15.4%.</p>
 </section>
 <section id="refrensi">
 <h2>Refrensi<a class="headerlink" href="#refrensi" title="Link to this heading">#</a></h2>

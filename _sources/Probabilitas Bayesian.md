@@ -35,18 +35,26 @@ Dalam statistik dan teori probabilitas, teorema Bayes (juga dikenal sebagai atur
 ## Contoh soal
 
 1. Diketahui:
+
 Dokter mengetahui bahwa meningitis menyebabkan stiff neck adalah 50% -> P(S|M)
+
 Prior probability of any patient having meningitis is 1/50.000 -> P(M)
+
 Prior probability of any patient having stiff neck is 1/20 -> P(S)
+
 Ditanyakan:
 Apabila pasien menderita stiff neck, berapa probabilitas terkena meningitis? P(M|S)?
+
 Jawab:
 P(M|S) = P(S|M) P(M) : P(S)
+
 P(M|S) = 0,5 x 1/50.000 : 1/20
+
 P(M|S) = 0,0002
 
 2. Diketahui:
 Tiga anggota sebuah organisasi telah dicalonkan sebagai ketua. Peluang Ardy terpilih adalah 0,3; peluang Charles terpilih adalah 0,5; dan peluang Kinanti terpilih adalah 0,2. Seandainya Ardy terpilih, peluang terjadinya kenaikan iuran anggota adalah 0,8. Seandainya Charles dan Kinanti terpilih, peluang kenaikan iuran anggota masing-masing adalah 0,1 dan 0,4. Berapa peluang terjadi kenaikan iuran anggota?
+
 Jawaban:
 A = Kenaikan iuran anggota
 B1 = Ardi yang terpilih
@@ -58,18 +66,30 @@ Peluang Kinanti terpilih P(B3).P(A|B3) = (0,2)(0,4) = 0,08
 
 3. Contoh Kasus
 Misalkan, ada sebuah tes medis untuk mendeteksi penyakit tertentu. Probabilitas dasar adalah:
+
 P( P )=0.01: Probabilitas seseorang memiliki penyakit adalah 1%.
+
 P(T∣P)=0.9: Probabilitas tes memberikan hasil positif jika seseorang memiliki penyakit adalah 90%.
+
 P(T∣¬P)=0.05: Probabilitas tes memberikan hasil positif jika seseorang tidak memiliki penyakit adalah 5%.
+
 Pertanyaan: Jika seseorang mendapat hasil tes positif, berapa probabilitas orang tersebut benar-benar memiliki penyakit P(P∣T)?
+
 Penyelesaian
 Gunakan Teorema Bayes:
+
 𝑃(𝑃∣𝑇)=𝑃(𝑇∣𝑃)⋅𝑃( 𝑃 ) / 𝑃(𝑇)
+
 Langkah1: Cari 𝑃(𝑇)
+
 𝑃(𝑇)=𝑃(𝑇∣𝑃)⋅𝑃( 𝑃 )+𝑃(𝑇∣¬𝑃)⋅𝑃(¬𝑃)
+
 P(T)=(0.9⋅0.01)+(0.05⋅0.99)=0.009+0.0495=0.0585
+
 Langkah 2: Hitung 𝑃(𝑃∣𝑇)
+
 𝑃(𝑃∣𝑇)=0.9⋅0.01 / 0.0585=0.154
+
 Jadi, probabilitas seseorang benar-benar memiliki penyakit jika hasil tes positif adalah 15.4%.
 
 
